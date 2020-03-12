@@ -1,8 +1,9 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import zfePackage from '../package.json';
+import SCATTER from './SCATTER';
 
-class Comp extends React.Component {
+class ZFE extends React.Component {
 
   constructor(props) {
     super(props)
@@ -22,15 +23,22 @@ class Comp extends React.Component {
     const { prefixCls } = this.props
     
     return (
-      <div className={`${prefixCls}-text hello`}>HELLO COMP9999</div>
+      <div className={`${prefixCls}`}>
+        <div>ZFG version {zfePackage.version}</div>
+      </div>
     )
   }
 }
 
-Comp.propTypes = {
+ZFE.propTypes = {
   prefixCls: PropTypes.string
 }
-Comp.defaultProps = {
+ZFE.defaultProps = {
   prefixCls: 'cr-app'
 }
-export default Comp
+
+export {
+  SCATTER
+}
+
+export default ZFE;
