@@ -10,7 +10,7 @@
     "pub": "npm run test && npm run build && npm run compile && npm publish",
     "test": "jest",
     "coverage": "jest --coverage",
-    "hello": "echo \"hello world\""
+    "hello": "echo \"skip test\""
   },
   "keywords": [],
   "author": "feasin",
