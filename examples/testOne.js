@@ -15,7 +15,7 @@ reactContainer.style.cssText = `
 function render(container) {
   ReactDOM.render(
     <div>
-      <h2>RESCT COMPONENT TEMPLATE</h2>
+      <h2>RESCT COMPONENT TEMPLATE3444</h2>
       <Testone />
     </div>, container
   )

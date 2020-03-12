@@ -1,7 +1,8 @@
-import React, { PureComponent, Component } from 'react';
+import React from 'react';
 import PropTypes from 'prop-types';
+import zfePackage from '../package.json';
 
-class Comp extends PureComponent {
+class Comp extends React.Component {
 
   constructor(props) {
     super(props)
@@ -21,7 +22,7 @@ class Comp extends PureComponent {
     const { prefixCls } = this.props
     
     return (
-      <div className={`${prefixCls}-text hello`}>HELLO COMP</div>
+      <div className={`${prefixCls}-text hello`}>HELLO COMP9999</div>
     )
   }
 }

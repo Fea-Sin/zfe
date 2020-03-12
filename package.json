@@ -1,15 +1,16 @@
 {
   "name": "zfe",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "echarts about react component",
   "scripts": {
-    "start": "rc-tools run server",
-    "build": "rc-tools run build",
-    "lint": "rc-tools run lint",
-    "compile": "rc-tools run compile --babel-runtime",
+    "start": "rc-tools-feasin run server",
+    "build": "rc-tools-feasin run build",
+    "lint": "rc-tools-feasin run lint",
+    "compile": "rc-tools-feasin run compile --babel-runtime",
     "pub": "npm run test && npm run build && npm run compile && npm publish",
-    "test": "jest --no-cache --updateSnapshot",
-    "coverage": "jest --coverage "
+    "test": "jest",
+    "coverage": "jest --coverage",
+    "hello": "echo \"hello world\""
   },
   "keywords": [],
   "author": "feasin",
@@ -40,10 +41,7 @@
     ],
     "snapshotSerializers": [
       "enzyme-to-json/serializer"
-    ],
-    "transform": {
-      "\\.jsx?$": "./node_modules/rc-tools/scripts/jestPreprocessor.js"
-    }
+    ]
   },
   "devDependencies": {
     "enzyme": "^3.1.1",
@@ -51,7 +49,7 @@
     "enzyme-to-json": "^3.2.1",
     "jest": "^21.2.1",
     "pre-commit": "1.x",
-    "rc-tools": "^9.5.3"
+    "rc-tools-feasin": "6.5.9"
   },
   "dependencies": {
     "babel-runtime": "6.x",
@@ -61,5 +59,8 @@
     "react-dom": "^16.8.0",
     "rc-util": "^4.1.0"
   },
+  "pre-commit": [
+    "hello"
+  ],
   "license": "MIT"
 }
