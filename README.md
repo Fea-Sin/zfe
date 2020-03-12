@@ -1,28 +1,21 @@
-# cr-comp
+## zfe
 
-react component
-
+echarts about react component
 
 ## Usage
-
-use cr-comp create your react component
-
-```jsx
-git clone https://github.com/Fea-Sin/cr-comp.git your-project-name
-```
 
 ## API
 
 ## Development
 
 ```
-cnpm install
+npm install
 npm start
 ```
 
 ## Example
 
-http://localhost:8018/examples/testOne.html
+http://localhost:8018/examples/scatter.html
 
 ## Test
   ```js
@@ -30,8 +23,6 @@ http://localhost:8018/examples/testOne.html
   
   npm run coverage
   ```
-
-
 
 ## License
 
