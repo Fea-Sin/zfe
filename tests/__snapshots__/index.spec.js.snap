@@ -1,0 +1,11 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`zfe snapshot to match 1`] = `
+<div
+  class="cr-app"
+>
+  <div>
+    ZFG version 0.0.2
+  </div>
+</div>
+`;

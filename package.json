@@ -8,7 +8,7 @@
     "lint": "rc-tools-feasin run lint",
     "compile": "rc-tools-feasin run compile --babel-runtime",
     "pub": "npm run test && npm run build && npm run compile && npm publish",
-    "test": "jest",
+    "test": "jest --no-cache --updateSnapshot",
     "coverage": "jest --coverage",
     "hello": "echo \"skip test\""
   },
@@ -41,7 +41,10 @@
     ],
     "snapshotSerializers": [
       "enzyme-to-json/serializer"
-    ]
+    ],
+    "transform": {
+      "\\.jsx?$": "./node_modules/rc-tools-feasin/scripts/jestPreprocessor.js"
+    }
   },
   "devDependencies": {
     "enzyme": "^3.1.1",
@@ -61,7 +64,7 @@
     "react-dom": "^16.8.0"
   },
   "pre-commit": [
-    "hello"
+    "test"
   ],
   "license": "MIT"
 }
