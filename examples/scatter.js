@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import Testone, { SCATTER } from 'zfe';
+import Testone, { SCATTER } from '../src';
 import '../assets/index.less';
 
 const reactContainer = document.getElementById('__react-content');
