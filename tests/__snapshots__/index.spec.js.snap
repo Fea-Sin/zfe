@@ -5,7 +5,7 @@ exports[`zfe snapshot to match 1`] = `
   class="cr-app"
 >
   <div>
-    ZFG version 0.0.2
+    ZFG version 1.0.2
   </div>
 </div>
 `;
