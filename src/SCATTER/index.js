@@ -92,6 +92,10 @@ class App extends React.Component {
     window.addEventListener('resize', this.onResizeHandle)
   }
 
+  componentDidUpdate() {
+    this.init()
+  }
+
   componentWillUnmount() {
     window.removeEventListener('resize', this.onResizeHandle)
   }
