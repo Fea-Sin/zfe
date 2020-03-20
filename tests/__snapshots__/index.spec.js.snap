@@ -5,6 +5,9 @@ exports[`zfe snapshot to match 1`] = `
   class="cr-app"
 >
   <div>
+    echarts version 4.6.0
+  </div>
+  <div>
     ZFG version 1.0.2
   </div>
 </div>
