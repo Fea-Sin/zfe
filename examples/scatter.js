@@ -16,9 +16,18 @@ const option = {
   xAxis: {},
   yAxis: {},
   tooltip: {
-    formatter: 'Group {a}: ({c})'
+    formatter: 'Group {a}: ({c})',
+    backgroundColor: 'rgba(250,250,250,1)',
+    borderColor: '#e3e2e1',
+    borderWidth: 1,
+    padding: 8,
+    textStyle: {
+      color: '#000',
+    }
   },
+  color: ['#1890FF'],
   series: [{
+      type: 'scatter',
       symbolSize: 10,
       data: [
         [10.0, 8.04],
@@ -33,15 +42,18 @@ const option = {
         [7.0, 4.82],
         [5.0, 5.68]
       ],
-      type: 'scatter',
       markLine: {
         animation: false,
+        symbol: 'none',
+        symbolSize: 0,
         label: {
             formatter: 'y = 0.5 * x + 3',
-            position: 'middle'
+            position: 'middle',
         },
         lineStyle: {
-            type: 'solid'
+            type: 'solid',
+            color: '#FF516A',
+            width: 2,
         },
         tooltip: {
             formatter: 'y = 0.5 * x + 3'
