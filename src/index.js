@@ -24,6 +24,7 @@ class ZFE extends React.Component {
     
     return (
       <div className={`${prefixCls}`}>
+        <div>echarts version {zfePackage.dependencies.echarts.slice(1)}</div>
         <div>ZFG version {zfePackage.version}</div>
       </div>
     )
