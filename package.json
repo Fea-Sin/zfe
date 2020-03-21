@@ -1,6 +1,6 @@
 {
   "name": "zfe-charts",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "echarts about react component",
   "scripts": {
     "start": "rc-tools-feasin run server",
