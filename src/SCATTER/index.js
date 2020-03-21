@@ -10,7 +10,7 @@ import 'echarts/lib/component/geo';
 import 'echarts/lib/component/polar';
 import 'echarts/lib/chart/scatter';
 
-class App extends React.Component {
+class App extends React.PureComponent {
 
   constructor(props) {
     super(props)
