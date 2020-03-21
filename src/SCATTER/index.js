@@ -19,7 +19,7 @@ class App extends React.Component {
   }
 
   init = () => {
-    const { option={} } = this.props
+    const { option } = this.props
     if (this.chart.current) {
       this.scatter = echarts.init(this.chart.current)
       this.scatter.setOption(option)
@@ -36,6 +36,7 @@ class App extends React.Component {
   }
 
   componentDidUpdate() {
+    console.log('charts did update ---', this.props.option)
     this.init()
   }
 
@@ -45,7 +46,7 @@ class App extends React.Component {
   
   render() {
     const { width, height } = this.props
-    this.init()
+    // this.init()
     return (
       <div ref={this.chart} style={{ width, height }}>
       </div>
