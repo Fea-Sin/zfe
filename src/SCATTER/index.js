@@ -10,7 +10,7 @@ import 'echarts/lib/component/geo';
 import 'echarts/lib/component/polar';
 import 'echarts/lib/chart/scatter';
 
-class App extends React.PureComponent {
+class App extends React.Component {
 
   constructor(props) {
     super(props)
@@ -21,6 +21,10 @@ class App extends React.PureComponent {
   init = () => {
     const { option } = this.props
     if (this.chart.current) {
+      if (this.scatter) {
+        console.log('chart 清楚')
+        this.scatter.clear()
+      }
       this.scatter = echarts.init(this.chart.current)
       this.scatter.setOption(option)
     }
