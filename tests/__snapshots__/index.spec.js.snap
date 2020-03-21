@@ -8,7 +8,7 @@ exports[`zfe snapshot to match 1`] = `
     echarts version 4.6.0
   </div>
   <div>
-    ZFG version 1.0.2
+    ZFG version 1.0.3
   </div>
 </div>
 `;
