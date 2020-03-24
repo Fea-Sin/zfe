@@ -16,7 +16,11 @@ const option = {
   xAxis: {},
   yAxis: {},
   tooltip: {
-    formatter: 'Group {a}: ({c})',
+    formatter: function(params) {
+      // console.log('what is this----', params)
+      var res = '<div>' + params.data[0].toFixed(2) + ' , ' + params.data[1].toFixed(2) + '</div>'
+      return res
+    }, 
     backgroundColor: 'rgba(250,250,250,1)',
     borderColor: '#e3e2e1',
     borderWidth: 1,
@@ -27,6 +31,7 @@ const option = {
   },
   color: ['#1890FF'],
   series: [{
+      name: '散点图',
       type: 'scatter',
       symbolSize: 10,
       data: [
