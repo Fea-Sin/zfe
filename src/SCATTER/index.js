@@ -39,7 +39,6 @@ class App extends React.Component {
   }
 
   componentDidUpdate() {
-    // console.log('charts did update ---', this.props.option)
     this.init()
   }
 

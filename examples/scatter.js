@@ -98,10 +98,17 @@ function render(container) {
   ReactDOM.render(
     <div>
       <Testone />
-      <SCATTER
-        width='100%'
-        option={option}
-      />
+      <div style={{
+        border: '1px solid red',
+        width: '100%',
+        height: 500
+      }}>
+        <SCATTER
+          width='100%'
+          height='80%'
+          option={option}
+        />
+      </div>
     </div>, container
   )
 }
