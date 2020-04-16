@@ -1,13 +1,14 @@
 {
   "name": "zfe-charts",
-  "version": "1.0.7",
+  "version": "1.0.8",
   "description": "echarts about react component",
   "scripts": {
     "start": "rc-tools-feasin run server",
     "build": "rc-tools-feasin run build",
     "lint": "rc-tools-feasin run lint",
     "compile": "rc-tools-feasin run compile --babel-runtime",
-    "pub": "npm run test && npm run build && npm run compile && npm publish",
+    "pub": "npm run test && npm run build && npm run compile && zf-tools run pub",
+    "prepublish": "zf-tools run guard",
     "test": "jest --no-cache --updateSnapshot",
     "coverage": "jest --coverage",
     "hello": "echo \"skip test\""
@@ -52,7 +53,8 @@
     "enzyme-to-json": "^3.2.1",
     "jest": "^21.2.1",
     "pre-commit": "1.x",
-    "rc-tools-feasin": "6.5.9"
+    "rc-tools-feasin": "6.5.9",
+    "zf-tools": "^1.0.3"
   },
   "dependencies": {
     "babel-runtime": "6.x",
