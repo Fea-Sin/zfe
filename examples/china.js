@@ -11,15 +11,6 @@ reactContainer.style.cssText = `
                                 margin-bottom: 10px;
                                `
 
-const data3 = [
-  {name: '上海', supplyAreaCount: 400, customerAreaCount: 30},
-  {name: '湖南', supplyAreaCount: 28, customerAreaCount: 899},
-  {name: '北京', supplyAreaCount: 520, customerAreaCount: 27},
-  {name: '江苏', supplyAreaCount: 41, customerAreaCount: 567},
-  {name: '青海', supplyAreaCount: 66, customerAreaCount: 999},
-  {name: '内蒙古', supplyAreaCount: 44, customerAreaCount: 34},
-  {name: '台湾', supplyAreaCount: 230, customerAreaCount: 14},
-]
 const data4 = [
   {shortArea: '上海', supplyAreaCount: 400, customerAreaCount: 30},
   {shortArea: '湖南', supplyAreaCount: 28, customerAreaCount: 899},
@@ -28,6 +19,15 @@ const data4 = [
   {shortArea: '青海', supplyAreaCount: 66, customerAreaCount: 999},
   {shortArea: '内蒙古', supplyAreaCount: 44, customerAreaCount: 34},
   {shortArea: '台湾', supplyAreaCount: 230, customerAreaCount: 14},
+]
+const data5 = [
+  {shortArea: '上海', supplyAreaCount: 5, customerAreaCount: 1},
+  {shortArea: '湖南', supplyAreaCount: 0, customerAreaCount: 0},
+  {shortArea: '北京', supplyAreaCount: 1, customerAreaCount: 5},
+  {shortArea: '江苏', supplyAreaCount: 1, customerAreaCount: 2},
+  {shortArea: '青海', supplyAreaCount: 0, customerAreaCount: 0},
+  {shortArea: '内蒙古', supplyAreaCount: 0, customerAreaCount: 0},
+  {shortArea: '台湾', supplyAreaCount: 0, customerAreaCount: 0},
 ]
 const option = {
   height: 422,
@@ -44,7 +44,7 @@ function render(container) {
     <div>
       <Testone />
       <div>
-        <CHINA option={option} mapData={data4} />
+        <CHINA option={option} mapData={data5} />
         {/* <CHINA /> */}
       </div>
     </div>, container

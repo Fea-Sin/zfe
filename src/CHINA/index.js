@@ -41,6 +41,8 @@ class App extends React.Component {
     const dataAdapter = option && option.dataAdapter
     const INDEX = (dataAdapter && dataAdapter.index) || 1
     const COLOR = (dataAdapter && dataAdapter.color) || '#fd95a3'
+    const max = Math.max(...mapData.map( item => item[ dataAdapter.valueKey[INDEX-1] ] ));
+    console.log('最大值----', max)
 
     const optionT = {
       backgroundColor: '#fff',
@@ -89,7 +91,8 @@ class App extends React.Component {
         //  showEffectOn: 'emphasis',    //配置何时显示特效 render 一直显示，emphasis放上去显示
          showEffectOn: 'render',         //配置何时显示特效 render 一直显示，emphasis放上去显示
          symbolSize: function (val) {
-           let count = val[1 + INDEX] / 30
+           const STEP = max / 15
+           let count = val[1 + INDEX] / STEP
            count = Math.max(count, 3)
            count = Math.min(count, 15)
            return count;
