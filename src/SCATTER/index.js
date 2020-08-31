@@ -49,8 +49,7 @@ class App extends React.Component {
   render() {
     const { width, height } = this.props
     return (
-      <div ref={this.chart} style={{ width, height }}>
-      </div>
+      <div ref={this.chart} style={{ width, height }}></div>
     )
   }
 }

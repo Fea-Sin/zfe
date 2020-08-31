@@ -2,6 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import zfePackage from '../package.json';
 import SCATTER from './SCATTER';
+import CHINA from './CHINA';
 
 class ZFE extends React.Component {
 
@@ -25,7 +26,7 @@ class ZFE extends React.Component {
     return (
       <div className={`${prefixCls}`}>
         <div>echarts version {zfePackage.dependencies.echarts.slice(1)}</div>
-        <div>ZFG version {zfePackage.version}</div>
+        <div>ZFE version {zfePackage.version}</div>
       </div>
     )
   }
@@ -39,7 +40,8 @@ ZFE.defaultProps = {
 }
 
 export {
-  SCATTER
+  SCATTER,
+  CHINA
 }
 
 export default ZFE;
