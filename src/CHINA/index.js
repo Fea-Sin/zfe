@@ -6,19 +6,6 @@ import geoCoordMap from './geoCoordMap';
 import chinaCoordMap from './chinaCoordMap';
 import IsEqual from 'lodash/isEqual';
 
-const convertData = (data) => {
-  let res = [];
-  for (let i=0; i<data.length; i++) {
-    let geoCoord = chinaCoordMap[data[i].name]
-    if (geoCoord) {
-      res.push({
-        value: geoCoord.concat(data[i].value),
-        name: data[i].name
-      })
-    }
-  }
-  return res;
-}
 
 class App extends React.Component {
 
@@ -32,14 +19,16 @@ class App extends React.Component {
     const { option } = this.props
     const dataAdapter = option && option.dataAdapter
     const valueKey  = dataAdapter && dataAdapter.valueKey
+    const dataKey = (dataAdapter && dataAdapter.dataKey) || 'name'
+
     let res = [];
     if (Array.isArray(data) && data.length > 0) {
       for (let i=0; i<data.length; i++) {
-        let geoCoord = chinaCoordMap[data[i].name]
+        let geoCoord = chinaCoordMap[data[i][dataKey]]
         if (geoCoord) {
           res.push({
             value: geoCoord.concat( valueKey.map(item => data[i][item]) ),
-            name: data[i].name
+            name: data[i][dataKey]
           })
         }
       }
@@ -96,7 +85,6 @@ class App extends React.Component {
          type: 'effectScatter',          // series图表类型
          effectType: 'ripple',           // 圆点闪烁样式，目前只支持ripple波纹式
          coordinateSystem: 'geo',        // series坐标系类型
-        //  data: convertData(mapData),     // series数据内容
          data: this.setData(mapData),     // series数据内容
         //  showEffectOn: 'emphasis',    //配置何时显示特效 render 一直显示，emphasis放上去显示
          showEffectOn: 'render',         //配置何时显示特效 render 一直显示，emphasis放上去显示

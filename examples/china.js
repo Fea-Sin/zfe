@@ -20,9 +20,19 @@ const data3 = [
   {name: '内蒙古', supplyAreaCount: 44, customerAreaCount: 34},
   {name: '台湾', supplyAreaCount: 230, customerAreaCount: 14},
 ]
+const data4 = [
+  {shortArea: '上海', supplyAreaCount: 400, customerAreaCount: 30},
+  {shortArea: '湖南', supplyAreaCount: 28, customerAreaCount: 899},
+  {shortArea: '北京', supplyAreaCount: 520, customerAreaCount: 27},
+  {shortArea: '江苏', supplyAreaCount: 41, customerAreaCount: 567},
+  {shortArea: '青海', supplyAreaCount: 66, customerAreaCount: 999},
+  {shortArea: '内蒙古', supplyAreaCount: 44, customerAreaCount: 34},
+  {shortArea: '台湾', supplyAreaCount: 230, customerAreaCount: 14},
+]
 const option = {
   height: 422,
   dataAdapter: {
+    dataKey: 'shortArea',
     valueKey: ['supplyAreaCount', 'customerAreaCount'],  // supplyAreaCount, customerAreaCount
     index: 2,
     color: '#637cfc', // #fd95a3, #637cfc
@@ -34,8 +44,8 @@ function render(container) {
     <div>
       <Testone />
       <div>
-        {/* <CHINA option={option} mapData={data3} /> */}
-        <CHINA />
+        <CHINA option={option} mapData={data4} />
+        {/* <CHINA /> */}
       </div>
     </div>, container
   )
