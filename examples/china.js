@@ -11,15 +11,6 @@ reactContainer.style.cssText = `
                                 margin-bottom: 10px;
                                `
 
-const data2 = [
-  {name: '上海', value: 400},
-  {name: '湖南', value: 28},
-  {name: '北京', value: 520},
-  {name: '江苏', value: 41},
-  {name: '青海', value: 66},
-  {name: '内蒙古', value: 44},
-  {name: '台湾', value: 230},
-]
 const data3 = [
   {name: '上海', supplyAreaCount: 400, customerAreaCount: 30},
   {name: '湖南', supplyAreaCount: 28, customerAreaCount: 899},
@@ -43,7 +34,8 @@ function render(container) {
     <div>
       <Testone />
       <div>
-        <CHINA option={option} mapData={data3} />
+        {/* <CHINA option={option} mapData={data3} /> */}
+        <CHINA />
       </div>
     </div>, container
   )

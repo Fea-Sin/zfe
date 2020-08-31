@@ -33,13 +33,15 @@ class App extends React.Component {
     const dataAdapter = option && option.dataAdapter
     const valueKey  = dataAdapter && dataAdapter.valueKey
     let res = [];
-    for (let i=0; i<data.length; i++) {
-      let geoCoord = chinaCoordMap[data[i].name]
-      if (geoCoord) {
-        res.push({
-          value: geoCoord.concat( valueKey.map(item => data[i][item]) ),
-          name: data[i].name
-        })
+    if (Array.isArray(data) && data.length > 0) {
+      for (let i=0; i<data.length; i++) {
+        let geoCoord = chinaCoordMap[data[i].name]
+        if (geoCoord) {
+          res.push({
+            value: geoCoord.concat( valueKey.map(item => data[i][item]) ),
+            name: data[i].name
+          })
+        }
       }
     }
     return res;
@@ -164,17 +166,21 @@ class App extends React.Component {
     const { width='100%', height=300 } = option
 
     return (
-      <div ref={this.chart} style={{ width , height }}></div>
+      <div ref={this.chart} style={{ width, height }}></div>
     )
   }
 }
 
 App.propTypes = {
   option: PropTypes.object,
-  data: PropTypes.array,
+  mapData: PropTypes.array,
 }
 App.defaultProps = {
-  data: []
+  mapData: [],
+  option: {
+    width: '100%',
+    height: 300,
+  },
 }
 
 export default App;
