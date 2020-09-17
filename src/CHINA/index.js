@@ -6,7 +6,6 @@ import geoCoordMap from './geoCoordMap';
 import chinaCoordMap from './chinaCoordMap';
 import IsEqual from 'lodash/isEqual';
 
-
 class App extends React.Component {
 
   constructor(props) {
@@ -104,7 +103,8 @@ class App extends React.Component {
            normal: {
              formatter: '{b}',
              position: 'right',
-             show: true                //显示位置信息，
+             show: true,                //显示位置信息，
+             color: '#545454',
            }
          },
     
