@@ -41,6 +41,8 @@ class App extends React.Component {
     const INDEX = (dataAdapter && dataAdapter.index) || 1
     const COLOR = (dataAdapter && dataAdapter.color) || '#fd95a3'
     const max = Math.max(...mapData.map( item => item[ dataAdapter.valueKey[INDEX-1] ] ));
+    const SIZEMAX = 25;
+    const SIZEMIN = 8;
 
     const optionT = {
       backgroundColor: '#fff',
@@ -66,8 +68,11 @@ class App extends React.Component {
          emphasis: {                     //鼠标划到后弹出的文字 显示省份
           color: '#545454',              //高亮背景色
           show: false,                    //是否高亮显示
-          fontSize:12                    //字体大小
-         }
+          fontSize: 8                    //字体大小
+         },
+         color: '#545454',
+         show: true,
+         fontSize: 8
        },
        itemStyle: {                      //坐标块本身
          normal: {                       //坐标块默认样式控制
@@ -75,7 +80,8 @@ class App extends React.Component {
           borderColor: '#c8c8d3'
          },
          emphasis: {
-          areaColor: '#dedef2'           //放坐标块儿上，块儿颜色
+          // areaColor: '#dedef2'           //放坐标块儿上，块儿颜色
+          areaColor: '#f7f7ff'           //放坐标块儿上，块儿颜色
          }
        }
       },
@@ -89,10 +95,10 @@ class App extends React.Component {
         //  showEffectOn: 'emphasis',    //配置何时显示特效 render 一直显示，emphasis放上去显示
          showEffectOn: 'render',         //配置何时显示特效 render 一直显示，emphasis放上去显示
          symbolSize: function (val) {
-           const STEP = (max / 15) || 1
-           let count = val[1 + INDEX] / STEP
-           count = Math.max(count, 3)
-           count = Math.min(count, 15)
+           const STEP = (max / SIZEMAX) || 1
+           let count = ( val[1 + INDEX] / STEP ).toFixed(2)
+           count = Math.max(count, SIZEMIN)
+           count = Math.min(count, SIZEMAX)
            return count;
          },
          rippleEffect: {                // ripple的样式控制
@@ -103,7 +109,7 @@ class App extends React.Component {
            normal: {
              formatter: '{b}',
              position: 'right',
-             show: true,                //显示位置信息，
+             show: false,                //显示位置信息，
              color: '#545454',
            }
          },

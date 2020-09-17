@@ -22,12 +22,12 @@ const data4 = [
 ]
 const data5 = [
   {shortArea: '上海', supplyAreaCount: 5, customerAreaCount: 1},
-  {shortArea: '湖南', supplyAreaCount: 0, customerAreaCount: 0},
-  {shortArea: '北京', supplyAreaCount: 1, customerAreaCount: 5},
+  {shortArea: '湖南', supplyAreaCount: 0, customerAreaCount: 1000},
+  {shortArea: '北京', supplyAreaCount: 1, customerAreaCount: 5000},
   {shortArea: '江苏', supplyAreaCount: 1, customerAreaCount: 2},
-  {shortArea: '青海', supplyAreaCount: 0, customerAreaCount: 0},
-  {shortArea: '内蒙古', supplyAreaCount: 0, customerAreaCount: 0},
-  {shortArea: '台湾', supplyAreaCount: 0, customerAreaCount: 0},
+  {shortArea: '青海', supplyAreaCount: 0, customerAreaCount: 400},
+  {shortArea: '内蒙古', supplyAreaCount: 0, customerAreaCount: 9999},
+  {shortArea: '台湾', supplyAreaCount: 0, customerAreaCount: 50},
 ]
 const option = {
   height: 422,
