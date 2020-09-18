@@ -40,9 +40,9 @@ class App extends React.Component {
     const dataAdapter = option && option.dataAdapter
     const INDEX = (dataAdapter && dataAdapter.index) || 1
     const COLOR = (dataAdapter && dataAdapter.color) || '#fd95a3'
+    const SIZEMAX = (dataAdapter && dataAdapter.sizeMax) || 15
+    const SIZEMIN = (dataAdapter && dataAdapter.sizeSmall) || 0
     const max = Math.max(...mapData.map( item => item[ dataAdapter.valueKey[INDEX-1] ] ));
-    const SIZEMAX = 25;
-    const SIZEMIN = 8;
 
     const optionT = {
       backgroundColor: '#fff',

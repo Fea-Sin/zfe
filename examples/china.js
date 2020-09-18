@@ -36,6 +36,8 @@ const option = {
     valueKey: ['supplyAreaCount', 'customerAreaCount'],  // supplyAreaCount, customerAreaCount
     index: 2,
     color: '#637cfc', // #fd95a3, #637cfc
+    sizeMax: 18,
+    sizeSmall: 0,
   },
 }
 
